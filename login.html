@@ -1,0 +1,53 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>login</title>  
+	<link href="style/style.css" rel="stylesheet">
+    <link href="style/homePage_styles.css" rel="stylesheet"> 
+    <script src="https://cdn.bootcss.com/vue/2.2.6/vue.js"></script>
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+	<div class="top">
+        <div class="topBar">
+            <div class="comWidth">
+                <div class="leftArea">
+                    <a v-text="key"></a>
+                    <a href="">免费注册</a>
+                </div>
+                <div class="rightArea">
+                    <a href="">我的淘宝</a>
+                    <a href="">我的订单</a>
+                    <a href="">收藏夹</a>
+                    <a href="">商品分类</a>
+                    <a href="">网站导航</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="comWidth">
+    	<div class="logo">
+            <a href="#"><img src="img/logo.jpg" alt="电子商务"/></a>
+        </div>
+    </div>
+        <div class="login">
+            <div class="login_box">
+                <div class="login_box_title">
+                    <p>用户登录</p>
+                </div>
+                <div class="input-group login_margin">
+                    <span class="input-group-addon" id="basic-addon2">@</span>
+                    <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
+                </div>
+                <div class="input-group login_margin">
+                    <span class="input-group-addon" id="basic-addon2">@</span>
+                    <input type="password" class="form-control" placeholder="Password" aria-describedby="sizing-addon2">
+                </div>
+                <div class="login_margin">
+                    <button type="button" class="btn btn-primary width_button">登录</button>
+                </div>
+            </div>
+        </div>
+
+</body>
+</html>

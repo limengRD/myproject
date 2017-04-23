@@ -1,0 +1,122 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+.top_menu{
+    display:block;
+    width:220px;
+    border:solid #e4393c 2px;
+}
+.top_title{
+    height:40px;
+    line-height:40px;
+    text-align:left;
+    font-size:11pt;
+    font-weight:bold;
+    color:white;
+    background:#e4393c;
+    padding-left:20px;
+}
+.top_menu li{
+    height:30px;
+    line-height:30px;
+    font-size:11pt;
+    list-style:none;
+    text-align:left;
+    padding-left:8px;
+    z-index:1;
+    background-image:url(1.png);
+    background-repeat:no-repeat;
+    background-position:right;
+}
+.top_menu li a{
+    text-decoration:none;
+    color:#313131;
+}
+.top_menu li a:hover{
+    text-decoration:underline;
+    font-weight:bold;
+    color:#e4393c;
+    cursor:pointer;
+}
+.top_menu .lihover{
+    border:1px solid #ddd;
+    border-right:0;
+    box-shadow:0 0 8px #ddd;
+    background:none;
+    height:28px;
+}
+/*二级菜单样式*/
+.submenu{
+    display:none;
+    width:718px;
+    left:220px;
+    position:absolute;
+    top:40px;
+    border:1px solid #ddd;
+    z-index:4;
+    background-color:#fff;
+    box-shadow:0 0 8px #ddd;
+}
+.left{
+    float:left;
+    width:490px;
+    margin:9px;
+}
+.right{
+    float:right;
+    width:200px;
+    margin:5px; 
+}
+.top_menu .lihover .submenu{
+    display:block;
+}
+.top_menu .lihover span{
+    background:#fff;
+    display:inline-block;
+    z-index:20;
+    width:20px;
+    height:28px;
+    float:right;
+    position:relative;
+}
+.left dl{
+    display:block;
+    border-bottom:1px solid #eee;
+    padding-bottom:8px;
+    padding-top:8px;
+    overflow:hidden;
+}
+.left dl dt{
+    display:block;
+    float:left;
+    width:60px;
+    text-align:right;
+    height:22px;
+    line-height:22px;
+    padding-right:6px;
+}
+.left dl dt a{
+    color:#e4393c;
+    font-weight:bold;
+    font-size:10pt;
+    text-decoration:underline;
+}
+.left dl dd{
+    display:block;
+    overflow:hidden;
+}
+.left dl dd a{
+    display:block;
+    float:left;
+    border-left:1px solid #ccc;
+    color:#737373;
+    font-size:9pt;
+    padding:0 8px;
+    height:14px;
+    line-height:14px;
+    margin:4px 0;
+}
+
+
+

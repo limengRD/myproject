@@ -1,0 +1,85 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>shoppingcart</title>  
+	<link href="style/style.css" rel="stylesheet">
+    <link href="style/homePage_styles.css" rel="stylesheet"> 
+    <script src="https://cdn.bootcss.com/vue/2.2.6/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/vue/2.2.6/vue.js"></script>
+    <script src="js/shoppingcart.js"></script>
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+	<div class="top">
+        <div class="topBar">
+            <div class="comWidth">
+                <div class="leftArea">
+                    <a v-text="key"></a>
+                    <a href="">免费注册</a>
+                </div>
+                <div class="rightArea">
+                    <a href="">我的淘宝</a>
+                    <a href="">我的订单</a>
+                    <a href="">收藏夹</a>
+                    <a href="">商品分类</a>
+                    <a href="">网站导航</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="comWidth">
+    	<div class="logo">
+            <a href="#"><img src="img/logo.jpg" alt="电子商务"/></a>
+        </div>
+    </div>
+    <div id="shoppingcart">
+        <div class="comWidth">
+            <div class="title">
+                <h3>购物车{{key}}</h3> 
+                <hr>
+            </div>
+            <div class="filter_Bar">
+                <div class="good_Allcheck float_left total">
+                    <input type="checkbox" v-bind:class="{'checked':checkAllFlag}" v-on:click="checkAll()">
+                    全选
+                </div>
+                <div class="good_information float_left total">商品信息</div>
+                <div class="unit_price float_left total">单价</div>
+                <div class="good_count float_left total">数量</div>
+                <div class="total_price float_left total">总价值</div>
+                <div class="operation float_left total">操作</div>
+            </div>
+            <ul class="ul_goods_list">
+                <li v-for="item in items">
+                    <div class="goods_list">
+                        <div class="float_left good_Allcheck total">
+                            <input type="checkbox" v-bind:checked="{'true':item.checked}" v-on:click="selectProduct(item)">
+                        </div>
+                        <div class="float_left good_information total">
+                            <div class="">{{item.productName}}</div>
+                        </div>
+                        <div class="float_left unit_price total">
+                            <div class="">￥{{item.productPrice}}</div>
+                        </div>
+                        <div class="float_left good_count total">
+                            <div class="good_count_all">
+                                <a v-on:click="doSubtraction(item)">-</a>
+                                <input class="good_count_input" type="type" value="0" v-model="item.productQuentity">
+                                <a v-on:click="doAdd(item)">+</a>
+                            </div>
+                        </div>
+                        <div class="float_left total_price total">
+                            <div class="">{{item.productPrice*item.productQuentity}}</div>
+                        </div>
+                        <div class="float_left operation total">
+                            <div>
+                                <a>删除</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>  
+</body>
+</html>
